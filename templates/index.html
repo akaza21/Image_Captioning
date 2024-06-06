@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tiny Captions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='icon.png') }}" type="image/png">
+  </head>
+  <body >
+    <div>
+      <div  class="main-search-input-wrap">
+
+        <div  class="main-search-input fl-wrap">
+        
+               <div class="main-search-input-item">
+                        <input type="text" id="image_url" name="image_url" value="" placeholder="Enter image URL" required oninput="previewImage()">
+               </div>
+                                         
+               <button type="submit" onclick="generateCaption()" class="main-search-button">Generate</button>
+         </div>
+                                     
+      </div>
+    </div>
+ 
+    <div class="columns">
+      <div class="left-column">
+        <div class="image-container">
+          <img id="image_preview" src="https://images.pexels.com/photos/6927881/pexels-photo-6927881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+        </div>
+      </div>
+      <div id="caption_div" class="right-column empty-state">
+        “Everything will be okay in the end. If it's not okay, it's not the end.” - John Lennon.
+      </div>
+    </div>
+    <div class="footer">
+      Image Captioning
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+#ignore
+/.chroma
+/.env
+.vercel

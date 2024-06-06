@@ -8,3 +8,4 @@ langchain
 replicate
 validators
 gunicorn
+python-dotenv

@@ -4,8 +4,9 @@ import validators
 import requests
 import replicate
 from io import BytesIO
-
-os.environ['REPLICATE_API_TOKEN'] = 'r8_KUkKYhfaYRChrpxVuhtguoPvJ5Zlncj0o6R75'
+from dotenv import load_dotenv
+load_dotenv() 
+REPLICATE_API_TOKEN = os.getenv('REPLICATE_API_TOKEN')
 
 app = Flask(__name__)
 app.static_folder = 'templates/static'

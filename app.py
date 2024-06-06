@@ -59,5 +59,5 @@ def is_valid_image(image_url):
         return True
     return False
 
-if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=9000, debug=True)
+# if __name__ == "__main__":
+#     app.run(host="127.0.0.1", port=9000, debug=True)
